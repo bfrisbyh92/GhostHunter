@@ -10,4 +10,4 @@ GhostHunter is an Open source intelligence tool which is used to gather an infor
 - cd GhostHunter
 - python3 ghosthunter.py
 
-![image](./public/ghosthunter.png)
+![image](./public/ghosthunter1.png)
