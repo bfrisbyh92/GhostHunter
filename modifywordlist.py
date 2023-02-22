@@ -13,9 +13,10 @@ yellow = Fore.YELLOW + Style.BRIGHT
 
 def modifywordlist():
     print("This is to modify wordlists. Some common wordlists are in all lowercase. Say you want to Uppercase the first letter, and add 1! to the end of each. Or any variety of those options. It won't harm the wordlist, you can select output in a second. Just answer a few questions and it's use will become apparent.")
-   
+
     # Getting the needed User Inputs so they have control
-    file_path = input(yellow + "Enter the file path of a word list you want to alter:")
+    file_path = input(
+        yellow + "Enter the file path of a word list you want to alter:")
     suffix = input(green + "Enter the suffix you want to add to each word: ")
     capitalize_index = int(
         input(cyan + "Enter the index of the character to capitalize (default is 0): ") or 0)

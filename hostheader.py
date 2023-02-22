@@ -8,8 +8,8 @@ yellow = Fore.YELLOW + Style.BRIGHT
 
 
 def HostHeader():
-    host = input("Enter host >> ")
-    port = int(input("Enter port >> "))
+    host = input(Back.BLACK + Fore.CYAN + "Enter host >> ")
+    port = int(input(Back.BLACK + Fore.CYAN + "Enter port >> "))
 
     if port == 80:
         port = 'http://'

@@ -5,7 +5,7 @@ from colorama import Fore, Back, Style
 ### My Imports
 from _osint_ import reconinput
 from _webvuln_ import Webvuln
-from passwordrecon import passwordrecon
+from _passwords_ import passwordrecon
 
 colorama.init(autoreset=True)
 
@@ -40,6 +40,6 @@ if __name__ == "__main__":
     print(green+"2. Web vulnerability scanning")
     print(green+"3. Passwords Section")
     print(yellow+"")
-    print(yellow+"Note: Type 'help' inside either module")
+    print(yellow+"Note: Type 'help' inside either module. For now, select an option.")
     a = int(input("Module >> "))
     Main(a)
