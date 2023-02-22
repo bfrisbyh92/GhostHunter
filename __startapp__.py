@@ -1,11 +1,18 @@
+### Package Imports
+import colorama
+from colorama import Fore, Back, Style
+
+### My Imports
 from socialrecon import reconinput
 from webvuln import Webvuln
 from passwordrecon import passwordrecon
 
-cyan = "\033[1;36;40m"
-green = "\033[1;32;40m"
-red = "\033[1;31;40m"
-Y = '\033[1;33;40m'
+colorama.init(autoreset=True)
+
+cyan = Fore.CYAN + Style.BRIGHT
+green = Fore.GREEN + Style.BRIGHT
+red = Fore.RED + Style.BRIGHT
+yellow = Fore.YELLOW + Style.BRIGHT
 
 
 def Main(a):
@@ -18,23 +25,21 @@ def Main(a):
 
 
 if __name__ == "__main__":
-    print(cyan+"""
-░██████╗░██╗░░██╗░█████╗░░██████╗████████╗██╗░░██╗██╗░░░██╗███╗░░██╗████████╗███████╗██████╗░
-██╔════╝░██║░░██║██╔══██╗██╔════╝╚══██╔══╝██║░░██║██║░░░██║████╗░██║╚══██╔══╝██╔════╝██╔══██╗
-██║░░██╗░███████║██║░░██║╚█████╗░░░░██║░░░███████║██║░░░██║██╔██╗██║░░░██║░░░█████╗░░██████╔╝
-██║░░╚██╗██╔══██║██║░░██║░╚═══██╗░░░██║░░░██╔══██║██║░░░██║██║╚████║░░░██║░░░██╔══╝░░██╔══██╗
-╚██████╔╝██║░░██║╚█████╔╝██████╔╝░░░██║░░░██║░░██║╚██████╔╝██║░╚███║░░░██║░░░███████╗██║░░██║
-░╚═════╝░╚═╝░░╚═╝░╚════╝░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚═════╝░╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
-    """)
-    print(Y)
-    print(Y+"                           Github profile: https://github.com/bfrisbyh92")
-    print(green+"""
-                Available Modules 
-           
-           1.Information gathering,
-           2.Web vulnerability scanning,
-           3.Passwords Section
-    """)
-    print(Y+"Note : Type 'help' inside either module")
+    print(cyan+"")
+    print(cyan+"░██████╗░██╗░░██╗░█████╗░░██████╗████████╗██╗░░██╗██╗░░░██╗███╗░░██╗████████╗███████╗██████╗░")
+    print(cyan+"██╔════╝░██║░░██║██╔══██╗██╔════╝╚══██╔══╝██║░░██║██║░░░██║████╗░██║╚══██╔══╝██╔════╝██╔══██╗")
+    print(cyan+"██║░░██╗░███████║██║░░██║╚█████╗░░░░██║░░░███████║██║░░░██║██╔██╗██║░░░██║░░░█████╗░░██████╔╝")
+    print(cyan+"██║░░╚██╗██╔══██║██║░░██║░╚═══██╗░░░██║░░░██╔══██║██║░░░██║██║╚████║░░░██║░░░██╔══╝░░██╔══██╗")
+    print(cyan+"╚██████╔╝██║░░██║╚█████╔╝██████╔╝░░░██║░░░██║░░██║╚██████╔╝██║░╚███║░░░██║░░░███████╗██║░░██║")
+    print(cyan+"░╚═════╝░╚═╝░░╚═╝░╚════╝░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚═════╝░╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝")
+    print(yellow+"Github profile: https://github.com/bfrisbyh92")
+    print(green+"")
+    print(green+"Available Modules")
+    print(green+"")
+    print(green+"1. Information gathering")
+    print(green+"2. Web vulnerability scanning")
+    print(green+"3. Passwords Section")
+    print(yellow+"")
+    print(yellow+"Note: Type 'help' inside either module")
     a = int(input("Module >> "))
     Main(a)

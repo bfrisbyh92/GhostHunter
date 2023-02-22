@@ -1,60 +1,33 @@
-# from clickjack import ClickJacking
-# from hostheader import HostHeader
-# from subdomain import fuzz
-# from reverseip import ReverseIP
-# cyan = "\033[1;36;40m"
-# green = "\033[1;32;40m"
-# red = "\033[1;31;40m"
-# Y = '\033[1;33;40m'
-
-
-# def Webvuln():
-#     print(green+"""
-#                1.ClickJacking,
-#                2.Host header injection.
-#                3.Subdomain Enumeration.
-#                4.Reverse IP
-#                """)
-#     inp = (input("Vulnerability >> "))
-#     if (inp == '1'):
-#         ClickJacking()
-#     elif (inp == '2'):
-#         HostHeader()
-#     elif (inp == '3'):
-#         fuzz()
-#     elif (inp == '4'):
-#         ReverseIP()
-#     elif (inp == 'help'):
-#         print(green+"""
-#                1.ClickJacking,
-#                2.Host header injection.
-#                3.Subdomain Enumeration.
-#                4.Reverse IP
-#                """)
-#     else:
-#         print(red+"Invalid choice")
-#     while True:
-#         Webvuln()
-
-
-# if __name__ == "__main__":
-#     Webvuln()
-
 from clickjack import ClickJacking
 from hostheader import HostHeader
 from subdomain import fuzz
 from reverseip import ReverseIP
-cyan = "\033[1;36;40m"
-green = "\033[1;32;40m"
-red = "\033[1;31;40m"
-Y = '\033[1;33;40m'
-BG_YELLOW = '\033[43m'
-BLACK = '\033[30m'
-RESET = '\033[0m'
+from colorama import Fore, Back, Style, init
+
+init()
+
+cyan = Fore.CYAN
+green = Fore.GREEN
+red = Fore.RED
+Y = Fore.YELLOW
+BG_YELLOW = Back.YELLOW
+BLACK = Fore.BLACK + Back.RESET
+RESET = Style.RESET_ALL
+
+banner = f'''
+{cyan}
+░██╗░░░░░░░██╗███████╗██████╗░    ██╗░░░██╗██╗░░░██╗██╗░░░░░███╗░░██╗░██████╗
+░██║░░██╗░░██║██╔════╝██╔══██╗    ██║░░░██║██║░░░██║██║░░░░░████╗░██║██╔════╝
+░╚██╗████╗██╔╝█████╗░░██████╦╝    ╚██╗░██╔╝██║░░░██║██║░░░░░██╔██╗██║╚█████╗░
+░░████╔═████║░██╔══╝░░██╔══██╗    ░╚████╔╝░██║░░░██║██║░░░░░██║╚████║░╚═══██╗
+░░╚██╔╝░╚██╔╝░███████╗██████╦╝    ░░╚██╔╝░░╚██████╔╝███████╗██║░╚███║██████╔╝
+░░░╚═╝░░░╚═╝░░╚══════╝╚═════╝░    ░░░╚═╝░░░░╚═════╝░╚══════╝╚═╝░░╚══╝╚═════╝░
+'''
 
 
 def Webvuln():
-    print(BG_YELLOW + BLACK + """
+    print(cyan + banner)
+    print(green + """
                1.ClickJacking,
                2.Host header injection.
                3.Subdomain Enumeration.
@@ -70,7 +43,7 @@ def Webvuln():
     elif (inp == '4'):
         ReverseIP()
     elif (inp == 'help'):
-        print(BG_YELLOW + BLACK + """
+        print(cyan + """
                1.ClickJacking,
                2.Host header injection.
                3.Subdomain Enumeration.

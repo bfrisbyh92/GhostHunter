@@ -13,24 +13,33 @@ from number import number
 
 colorama.init(autoreset=True)
 
-R = Fore.BLACK + Back.BLUE + Style.BRIGHT
-G = Fore.BLACK + Back.BLUE + Style.BRIGHT
-C = Fore.BLACK + Back.BLUE + Style.BRIGHT
-Y = Fore.BLACK + Back.BLUE + Style.BRIGHT
-B = Back.BLUE + Style.BRIGHT
+cyan = Fore.CYAN + Style.BRIGHT
+green = Fore.GREEN + Style.BRIGHT
+red = Fore.RED + Style.BRIGHT
+yellow = Fore.YELLOW + Style.BRIGHT
+
+banner = '''
+██╗███╗░░██╗███████╗░█████╗░  ░██████╗░░█████╗░████████╗██╗░░██╗███████╗██████╗░██╗███╗░░██╗░██████╗░
+██║████╗░██║██╔════╝██╔══██╗  ██╔════╝░██╔══██╗╚══██╔══╝██║░░██║██╔════╝██╔══██╗██║████╗░██║██╔════╝░
+██║██╔██╗██║█████╗░░██║░░██║  ██║░░██╗░███████║░░░██║░░░███████║█████╗░░██████╔╝██║██╔██╗██║██║░░██╗░
+██║██║╚████║██╔══╝░░██║░░██║  ██║░░╚██╗██╔══██║░░░██║░░░██╔══██║██╔══╝░░██╔══██╗██║██║╚████║██║░░╚██╗
+██║██║░╚███║██║░░░░░╚█████╔╝  ╚██████╔╝██║░░██║░░░██║░░░██║░░██║███████╗██║░░██║██║██║░╚███║╚██████╔╝
+╚═╝╚═╝░░╚══╝╚═╝░░░░░░╚════╝░  ░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░
+'''
 
 def reconinput():
-    print(G + B + """Tools available 
+    print(green + banner)
+    print(cyan + """Tools available 
 
-            1.Social media hunting using image
-            2.Trace Single IP
-            3.Heatmap
-            4.URL redirection checker
-            5.PDF meta data analysis
-            6.URL lookup in webpages
-            usage : type exit to stop
+            1. Social media hunting using image
+            2. Trace Single IP
+            3. Heatmap
+            4. URL redirection checker
+            5. PDF meta data analysis
+            6. URL lookup in webpages
+            usage: type exit to stop
             """)
-    inp = input(C + B + "Info>> ")
+    inp = input(yellow + "Info>> ")
     if inp == "1":
         recon()
     elif inp == "2":
@@ -46,18 +55,18 @@ def reconinput():
     elif inp == "exit":
         exit()
     elif inp == "help":
-        print(G + B + """Tools available 
+        print(cyan + """Tools available 
 
-            1.Social media hunting using image
-            2.Trace Single IP
-            3.Heatmap
-            4.URL redirection checker
-            5.PDF meta data analysis
-            6.URL lookup in webpages
-            usage : type exit to stop
+            1. Social media hunting using image
+            2. Trace Single IP
+            3. Heatmap
+            4. URL redirection checker
+            5. PDF meta data analysis
+            6. URL lookup in webpages
+            usage: type exit to stop
             """)
     else:
-        print(R + B + "Enter a valid option")
+        print(red + "Enter a valid option")
     while True:
         reconinput()
 
