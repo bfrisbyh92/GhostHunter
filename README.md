@@ -7,6 +7,7 @@ GhostHunter is an Open source intelligence tool which is used to gather an infor
 ## To-Do
 - Make a password area, for web scraping passwords, phone number password lists, and concatting words to create lists
 - Maybe create networking options with Scapy for a few simple tasks like sniffing, monitoring traffic, capture images
+- Organize projects structure better
 # Installation
 
 - git clone https://github.com/bfrisbyh92/GhostHunter
