@@ -3,8 +3,8 @@ import colorama
 from colorama import Fore, Back, Style
 
 ### My Imports
-from socialrecon import reconinput
-from webvuln import Webvuln
+from _osint_ import reconinput
+from _webvuln_ import Webvuln
 from passwordrecon import passwordrecon
 
 colorama.init(autoreset=True)
