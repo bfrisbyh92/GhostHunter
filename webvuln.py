@@ -12,17 +12,24 @@ def Webvuln():
     print(green+"""
                1.ClickJacking,
                2.Host header injection.
+               3.Subdomain Enumeration.
+               4.Reverse IP
                """)
     inp = (input("Vulnerability >> "))
     if (inp == '1'):
         ClickJacking()
     elif (inp == '2'):
         HostHeader()
-
+    elif (inp == '3'):
+        fuzz()
+    elif (inp == '4'):
+        ReverseIP()
     elif (inp == 'help'):
         print(green+"""
                1.ClickJacking,
                2.Host header injection.
+               3.Subdomain Enumeration.
+               4.Reverse IP
                """)
     else:
         print(red+"Invalid choice")

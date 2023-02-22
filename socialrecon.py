@@ -19,6 +19,8 @@ def reconinput():
     
             1.Social media hunting using image
             2.Trace Single IP
+            3.Heatmap
+            4.URL redirection checker
             
             usage : type exit to stop
             """)
@@ -27,6 +29,10 @@ def reconinput():
         recon()
     elif (inp == '2'):
         iplocate()
+    elif (inp == '3'):
+        read_multiple_ip()
+    elif (inp == '4'):
+        urlinfo()
     elif (inp == 'exit'):
         exit()
     elif (inp == 'help'):
@@ -34,7 +40,9 @@ def reconinput():
     
             1.Social media hunting using image
             2.Trace Single IP
-                
+            3.Heatmap
+            4.URL redirection checker
+            
             usage : type exit to stop
             """)
     else:
