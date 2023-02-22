@@ -6,6 +6,7 @@ from colorama import Fore, Back, Style
 from phonepasswords import phonenumwordlist
 from modifywordlist import modifywordlist
 from scrapwords import scrapwords
+from crunchwords import generate_words
 
 colorama.init(autoreset=True)
 
@@ -36,10 +37,10 @@ banner2 = """
 def passwordrecon():
     print(B + G + banner2)
     print(B + G + """Tools available 
-    
             1.Create Local Phone Number Password Lists
             2.Common Wordlist Modifications1!
             3.Scrape Websites for words
+            4.Crunch a Wordlist Together
             usage : type exit to stop
             """)
     inp = input(C + B + "Info>> ")
@@ -49,6 +50,8 @@ def passwordrecon():
         modifywordlist()
     elif inp == "3":
         scrapwords()
+    elif inp == "4":
+        generate_words()
     elif inp == "exit":
         exit()
     elif inp == "help":
@@ -57,6 +60,7 @@ def passwordrecon():
             1.PhoneNumber Password Lists
             2.Common Wordlist Modifications1!
             3.Scrape Websites for words
+            4.Crunch a Wordlist Together
             usage : type exit to stop
             """)
     # elif inp == "back":
