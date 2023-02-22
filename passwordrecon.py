@@ -1,32 +1,37 @@
-
+import colorama
+from colorama import Fore, Back, Style
 from phonepasswords import phonenumwordlist
-R = '\033[1;31;40m'
-G = '\033[1;32;40m'
-C = '\033[1;36;40m'
-Y = '\033[1;33;40m'
 
+colorama.init(autoreset=True)
+
+R = Fore.RED + Style.BRIGHT
+G = Fore.GREEN + Style.BRIGHT
+C = Fore.CYAN + Style.BRIGHT
+Y = Fore.YELLOW + Style.BRIGHT
+B = Back.BLACK
 
 def passwordrecon():
-    print(G+"""Tools available 
+    print(G + B + """Tools available 
     
             1.PhoneNumber Password Lists
             
             usage : type exit to stop
             """)
-    inp = (input("Info>> "))
-    if (inp == '1'):
+    inp = input(C + B + "Info>> ")
+    if inp == "1":
         phonenumwordlist()
-    elif (inp == 'exit'):
+    elif inp == "exit":
         exit()
-    elif (inp == 'help'):
-        print(G+"""Tools available 
+    elif inp == "help":
+        print(G + B + """Tools available 
     
-            1.Social media hunting using image
+            1.PhoneNumber Password Lists
             
             usage : type exit to stop
             """)
     else:
-        print(R+"Enter an valid option")
+        print(R + B + "Enter a valid option")
+
     while True:
         passwordrecon()
 

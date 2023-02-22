@@ -1,7 +1,17 @@
+import colorama
+from colorama import Back, Style
+
+colorama.init(autoreset=True)
+
+# Define a function to print a message with a blue background
+def print_blue(msg):
+    print(Back.BLUE + Style.BRIGHT + msg + Style.RESET_ALL)
+
 def phonenumwordlist():
 
     # get user input for area codes
-    area_codes = input("Enter area codes separated by commas: ")
+    print_blue("Enter area codes separated by commas: ")
+    area_codes = input()
 
     # split area codes into a list
     area_codes = [code.strip() for code in area_codes.split(',')]
@@ -18,4 +28,4 @@ def phonenumwordlist():
             file.write(number + "\n")
 
 
-print("Numbers written to numbers.txt in current directory.")
+print_blue("Numbers written to numbers.txt in current directory.")

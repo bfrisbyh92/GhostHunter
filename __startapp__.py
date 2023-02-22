@@ -1,6 +1,7 @@
 from socialrecon import reconinput
 from webvuln import Webvuln
 from passwordrecon import passwordrecon
+
 cyan = "\033[1;36;40m"
 green = "\033[1;32;40m"
 red = "\033[1;31;40m"
