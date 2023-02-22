@@ -9,10 +9,16 @@
 GhostHunter is an Open source intelligence tool which is used to gather an information about an person using a single input like an image, name or IP address.
 </p>
 
+## New Features
+- Web scraping for words
+- Similiar to crunch for wordlists(intended to compliment web scraping for words)
+- Modify Password Lists in common ways
+
+
 -------------
 ## To-Do
-- Make a password area, for web scraping passwords, phone number password lists, and concatting words to create lists
-- Maybe create networking options with Scapy for a few simple tasks like sniffing, monitoring traffic, capture images
+- Maybe create networking options with Scapy for a few simple tasks like http sniffing, monitoring traffic, and capture images
+- Detect Arp Poisoning on your network
 - Organize projects structure better
 - Add the ability to go back, instead of needing to close the program out and restart script
 # Installation
