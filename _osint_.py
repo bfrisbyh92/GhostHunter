@@ -10,7 +10,6 @@ from TraceIP import read_multiple_ip
 from webscrap import Links
 from NameInfo import Nameinfo
 from number import number
-# from __startapp__ import Main
 
 colorama.init(autoreset=True)
 
@@ -19,26 +18,16 @@ green = Fore.GREEN + Style.BRIGHT
 red = Fore.RED + Style.BRIGHT
 yellow = Fore.YELLOW + Style.BRIGHT
 
-# banner = '''
-# ██╗███╗░░██╗███████╗░█████╗░  ░██████╗░░█████╗░████████╗██╗░░██╗███████╗██████╗░██╗███╗░░██╗░██████╗░
-# ██║████╗░██║██╔════╝██╔══██╗  ██╔════╝░██╔══██╗╚══██╔══╝██║░░██║██╔════╝██╔══██╗██║████╗░██║██╔════╝░
-# ██║██╔██╗██║█████╗░░██║░░██║  ██║░░██╗░███████║░░░██║░░░███████║█████╗░░██████╔╝██║██╔██╗██║██║░░██╗░
-# ██║██║╚████║██╔══╝░░██║░░██║  ██║░░╚██╗██╔══██║░░░██║░░░██╔══██║██╔══╝░░██╔══██╗██║██║╚████║██║░░╚██╗
-# ██║██║░╚███║██║░░░░░╚█████╔╝  ╚██████╔╝██║░░██║░░░██║░░░██║░░██║███████╗██║░░██║██║██║░╚███║╚██████╔╝
-# ╚═╝╚═╝░░╚══╝╚═╝░░░░░░╚════╝░  ░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░
-# '''
+banner = f'''
+╦┌┐┌┌─┐┌─┐┬─┐┌┬┐┌─┐┌┬┐┬┌─┐┌┐┌  ╔═╗┌─┐┌┬┐┬ ┬┌─┐┬─┐┬┌┐┌┌─┐
+║│││├┤ │ │├┬┘│││├─┤ │ ││ ││││  ║ ╦├─┤ │ ├─┤├┤ ├┬┘│││││ ┬
+╩┘└┘└  └─┘┴└─┴ ┴┴ ┴ ┴ ┴└─┘┘└┘  ╚═╝┴ ┴ ┴ ┴ ┴└─┘┴└─┴┘└┘└─┘
 
-banner2 = f'''
-
-██████████████████████████████▀█████████████████████████████████████████████▀█
-█▄─▄█▄─▀█▄─▄█▄─▄▄─█─▄▄─███─▄▄▄▄██▀▄─██─▄─▄─█─█─█▄─▄▄─█▄─▄▄▀█▄─▄█▄─▀█▄─▄█─▄▄▄▄█
-██─███─█▄▀─███─▄███─██─███─██▄─██─▀─████─███─▄─██─▄█▀██─▄─▄██─███─█▄▀─██─██▄─█
-▀▄▄▄▀▄▄▄▀▀▄▄▀▄▄▄▀▀▀▄▄▄▄▀▀▀▄▄▄▄▄▀▄▄▀▄▄▀▀▄▄▄▀▀▄▀▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀
 '''
 
 
 def reconinput():
-    print(green + banner2)
+    print(green + banner)
     print(cyan + """Tools available 
 
             1. Social media hunting using image
@@ -47,6 +36,9 @@ def reconinput():
             4. URL redirection checker
             5. PDF meta data analysis
             6. URL lookup in webpages
+            7.Information Gathering using Name
+            8.Phonenumber verifier
+
             usage: type exit to stop
             """)
     inp = input(yellow + "Info>> ")
@@ -62,6 +54,10 @@ def reconinput():
         pdfinfo()
     elif inp == "6":
         Links()
+    elif (inp == '7'):
+        Nameinfo()
+    elif (inp == '8'):
+        number()
     elif inp == "exit":
         exit()
     elif inp == "help":
@@ -73,10 +69,10 @@ def reconinput():
             4. URL redirection checker
             5. PDF meta data analysis
             6. URL lookup in webpages
+            7.Information Gathering using Name
+            8.Phonenumber verifier
             usage: type exit to stop
             """)
-    # elif inp == "back":
-    #     Main()
     else:
         print(red + "Enter a valid option")
     while True:

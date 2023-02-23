@@ -1,8 +1,8 @@
-### Package Imports
+# Package Imports
 import colorama
 from colorama import Fore, Back, Style
 
-### My Imports
+# My Imports
 from _osint_ import reconinput
 from _webvuln_ import Webvuln
 from _passwords_ import passwordrecon
@@ -13,6 +13,12 @@ cyan = Fore.CYAN + Style.BRIGHT
 green = Fore.GREEN + Style.BRIGHT
 red = Fore.RED + Style.BRIGHT
 yellow = Fore.YELLOW + Style.BRIGHT
+
+banner = '''
+╔═╗┬ ┬┌─┐┌─┐┌┬┐  ╦ ╦┬ ┬┌┐┌┌┬┐┌─┐┬─┐
+║ ╦├─┤│ │└─┐ │   ╠═╣│ ││││ │ ├┤ ├┬┘
+╚═╝┴ ┴└─┘└─┘ ┴   ╩ ╩└─┘┘└┘ ┴ └─┘┴└─
+'''
 
 
 def Main(a):
@@ -25,13 +31,7 @@ def Main(a):
 
 
 if __name__ == "__main__":
-    print(cyan+"")
-    print(cyan+"░██████╗░██╗░░██╗░█████╗░░██████╗████████╗██╗░░██╗██╗░░░██╗███╗░░██╗████████╗███████╗██████╗░")
-    print(cyan+"██╔════╝░██║░░██║██╔══██╗██╔════╝╚══██╔══╝██║░░██║██║░░░██║████╗░██║╚══██╔══╝██╔════╝██╔══██╗")
-    print(cyan+"██║░░██╗░███████║██║░░██║╚█████╗░░░░██║░░░███████║██║░░░██║██╔██╗██║░░░██║░░░█████╗░░██████╔╝")
-    print(cyan+"██║░░╚██╗██╔══██║██║░░██║░╚═══██╗░░░██║░░░██╔══██║██║░░░██║██║╚████║░░░██║░░░██╔══╝░░██╔══██╗")
-    print(cyan+"╚██████╔╝██║░░██║╚█████╔╝██████╔╝░░░██║░░░██║░░██║╚██████╔╝██║░╚███║░░░██║░░░███████╗██║░░██║")
-    print(cyan+"░╚═════╝░╚═╝░░╚═╝░╚════╝░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚═════╝░╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝")
+    print(cyan + banner)
     print(yellow+"Github profile: https://github.com/bfrisbyh92")
     print(green+"")
     print(green+"Available Modules")
@@ -41,5 +41,5 @@ if __name__ == "__main__":
     print(green+"3. Passwords Section")
     print(yellow+"")
     print(yellow+"Note: Type 'help' inside either module. For now, select an option.")
-    a = int(input("Module >> "))
+    a = int(input(Fore.GREEN + Back.BLACK + "Module >> "))
     Main(a)
